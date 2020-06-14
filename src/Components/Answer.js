@@ -6,7 +6,7 @@ const initialState = {
   name: "",
 };
 export class Answer extends React.Component {
-  state = { initialState, question: true };
+  state = { initialState };
   //handles the change and only allows cipher to render one time
   handleChange = (event) => {
     this.setState({ name: event.target.value });
@@ -35,7 +35,6 @@ export class Answer extends React.Component {
     return (
       //renders text imput
       <div>
-        {this.state.question ? (
           <form onSubmit={this.handleSubmit}>
             <input
               placeholder=""
@@ -45,7 +44,6 @@ export class Answer extends React.Component {
             />
             <button type="submit">submit</button>
           </form>
-        ) : null}
       </div>
     );
   }
