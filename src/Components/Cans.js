@@ -37,8 +37,6 @@ export class Cans extends React.Component {
   render() {
     return (
       <div>
-        {this.state.question ? (
-          //sets text imput
           <form onSubmit={this.handleSubmit}>
             <input
               //sets place holder for text imput
@@ -49,7 +47,6 @@ export class Cans extends React.Component {
             />
             <button type="submit">submit</button>
           </form>
-        ) : null}
       </div>
     );
   }
